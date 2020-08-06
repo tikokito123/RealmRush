@@ -7,7 +7,6 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] List<Waypoint> path;
-    // Start is called before the first frame update
     void Start()
     {
         StartCoroutine(PrintAllWayPoints());
