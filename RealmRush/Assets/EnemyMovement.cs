@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] List<Waypoint> path;
     void Start()
     {
-        StartCoroutine(PrintAllWayPoints());
+        PathFinder pathFinder = FindObjectOfType<PathFinder>();
+        var path = pathFinder.GetPath();
+        StartCoroutine(PrintAllWayPoints(path));
     }
 
-     IEnumerator PrintAllWayPoints()
+    IEnumerator PrintAllWayPoints(List<Waypoint> path)
     {
         foreach (Waypoint wayPoints in path)
         {

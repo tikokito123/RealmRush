@@ -9,14 +9,14 @@ public class Waypoint : MonoBehaviour
     public Waypoint exploredFrom;
     Vector2Int gridPos;
     const int gridSize = 10;
-    private void Update()
-    {
-        if (isExplored)
-        {
-            exploredColor = Color.white;
-            exploredFrom.SetTopColor(exploredColor);
-        }
-    }
+    //private void Update()
+    //{
+    //   if (isExplored)
+    //    {
+    //       exploredColor = Color.white;
+    //       exploredFrom.SetTopColor(exploredColor);
+    //    }
+    //}
     public int GetGridSize()
     {
         return gridSize;
