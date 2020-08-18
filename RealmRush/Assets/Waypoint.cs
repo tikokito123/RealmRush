@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class Waypoint : MonoBehaviour
@@ -11,11 +12,11 @@ public class Waypoint : MonoBehaviour
     const int gridSize = 10;
     //private void Update()
     //{
-    //   if (isExplored)
-    //    {
-    //       exploredColor = Color.white;
-    //       exploredFrom.SetTopColor(exploredColor);
-    //    }
+    //  if (isExplored)
+    //  {
+    //        exploredColor = Color.white;
+    //        exploredFrom.SetTopColor(exploredColor);
+    //  }
     //}
     public int GetGridSize()
     {
