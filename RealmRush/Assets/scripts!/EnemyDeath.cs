@@ -5,10 +5,11 @@ using UnityEngine;
 public class EnemyDeath : MonoBehaviour
 {
     [SerializeField] GameObject deathFx;
+    [SerializeField] ParticleSystem hit;
     public int health = 3;
     void OnParticleCollision(GameObject other)
     {
-        Death();
+        Death();   
     }
 
     private void Death()
@@ -20,5 +21,6 @@ public class EnemyDeath : MonoBehaviour
             Destroy(gameObject);
         }
         health--;
+        hit.Play();
     }
 }
