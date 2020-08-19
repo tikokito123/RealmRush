@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4279781351970801081}
   - component: {fileID: 4672265127961566469}
   - component: {fileID: 4279781351079308449}
+  - component: {fileID: 249904976625879705}
   m_Layer: 0
   m_Name: Friendly Blocks
   m_TagString: Untagged
@@ -61,6 +62,22 @@ MonoBehaviour:
   exploredColor: {r: 0, g: 0, b: 0, a: 0}
   isExplored: 0
   exploredFrom: {fileID: 0}
+  isPlaceable: 1
+  towerPrefab: {fileID: 2608965819308463066, guid: 4b43d08d50592e549b9de62f759c292c,
+    type: 3}
+--- !u!65 &249904976625879705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3932737075710811465}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4160819443145775958
 GameObject:
   m_ObjectHideFlags: 0
