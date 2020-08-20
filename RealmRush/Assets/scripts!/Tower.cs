@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     [SerializeField] Transform objectToPan;
     [SerializeField] float attackRange = 30f;
     [SerializeField] ParticleSystem myParticles;
+    public Waypoint baseWaypoint;
     //state
     Transform targetEnemy;
     void Update()
@@ -41,7 +42,7 @@ public class Tower : MonoBehaviour
     private Transform GetClosest(Transform transformA,Transform transformB)
     {
         var distToA = Vector3.Distance(transformA.position, transform.position);
-        var distToB = Vector3.Distance(transformA.position, transform.position);
+        var distToB = Vector3.Distance(transformB.position, transform.position);
         if (distToA <= distToB)
         {
             return transformA;
@@ -51,10 +52,10 @@ public class Tower : MonoBehaviour
 
     private void ShootAtEnemy()
     {
+        objectToPan.LookAt(targetEnemy);
         float dist = Vector3.Distance(targetEnemy.position, transform.position);
-        if (dist < attackRange)
+        if (dist <= attackRange)
         {
-            objectToPan.LookAt(targetEnemy);
             Shoot(true);
         }
         else

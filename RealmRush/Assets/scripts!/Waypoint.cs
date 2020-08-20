@@ -12,7 +12,7 @@ public class Waypoint : MonoBehaviour
     Vector2Int gridPos;
     const int gridSize = 10;
     public bool isPlaceable = true;
-    [SerializeField] Tower towerPrefab;
+    
     private void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0))
@@ -23,9 +23,7 @@ public class Waypoint : MonoBehaviour
             }
             else
             {
-                print("you cant put another than one towers in the same place!");
-                Instantiate(towerPrefab, transform.position, Quaternion.identity);
-                isPlaceable = false;
+                FindObjectOfType<TowerFactory>().AddTower(this);
             }
         }
     }
