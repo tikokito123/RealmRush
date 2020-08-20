@@ -6453,8 +6453,8 @@ ParticleSystem:
     - sprite: {fileID: 21300082, guid: 501216200c963de40a28b3a52d2cc505, type: 3}
     - sprite: {fileID: 21300084, guid: 501216200c963de40a28b3a52d2cc505, type: 3}
     - sprite: {fileID: 21300086, guid: 501216200c963de40a28b3a52d2cc505, type: 3}
-    flipU: 1
-    flipV: 1
+    flipU: 0
+    flipV: 0
   VelocityModule:
     enabled: 1
     x:
@@ -9772,7 +9772,7 @@ ParticleSystemRenderer:
   m_ShadowBias: 0
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
-  m_Flip: {x: 0, y: 0, z: 0}
+  m_Flip: {x: 1, y: 1, z: 0}
   m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 0
   m_ApplyActiveColorSpace: 0
@@ -19652,7 +19652,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.142
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

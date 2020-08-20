@@ -17,8 +17,9 @@ public class EnemyDeath : MonoBehaviour
         
         if (health <= 0)
         {
-            Instantiate(deathFx, transform.position, Quaternion.identity);
+            var vfx = Instantiate(deathFx, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            Destroy(vfx.gameObject, 1f);
         }
         health--;
         hit.Play();

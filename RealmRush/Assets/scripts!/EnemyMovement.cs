@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [SerializeField] float movementSpeed = 1f;
+    [SerializeField] GameObject suicide;
     void Start()
     {
         PathFinder pathFinder = FindObjectOfType<PathFinder>();
@@ -19,7 +21,10 @@ public class EnemyMovement : MonoBehaviour
         foreach (Waypoint wayPoints in path)
         {
             transform.position = wayPoints.transform.position;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(movementSpeed);
         }
+        var shipsuicide = Instantiate(suicide, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        Destroy(shipsuicide.gameObject, 1f);
     }
 }
