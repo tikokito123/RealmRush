@@ -6,6 +6,7 @@ using UnityEngine;
 public class TowerFactory : MonoBehaviour
 {
     [SerializeField] Tower towerPrefab;
+    [Range(1,10)]
     [SerializeField] int towerLimit = 3;
     [SerializeField] Transform towerParentTransform;
     Queue<Tower> towers = new Queue<Tower>();

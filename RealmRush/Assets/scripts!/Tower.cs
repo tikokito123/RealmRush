@@ -43,11 +43,7 @@ public class Tower : MonoBehaviour
     {
         var distToA = Vector3.Distance(transformA.position, transform.position);
         var distToB = Vector3.Distance(transformB.position, transform.position);
-        if (distToA <= distToB)
-        {
-            return transformA;
-        }
-            return transformB;
+        return (distToA <= distToB) ? transformA : transformB;
     }
 
     private void ShootAtEnemy()
