@@ -81,7 +81,7 @@ MonoBehaviour:
   deathFx: {fileID: 1929956291960174, guid: 1a51bfda454239a41afb7dee687c6ac0, type: 3}
   hit: {fileID: 7353648039484144230}
   hitSFX: {fileID: 8300000, guid: 6d492e62f8ad80e4eaf1c6869bb76c4a, type: 3}
-  deathSFX: {fileID: 8300000, guid: 0579dc5d712b04b4291909f2dd3fd64e, type: 3}
+  deathSFX: {fileID: 8300000, guid: 37a8c4b99174fa742938356c88331c14, type: 3}
   health: 3
 --- !u!82 &-6339405794205887420
 AudioSource:
@@ -95,7 +95,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.301
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 0
   Mute: 0

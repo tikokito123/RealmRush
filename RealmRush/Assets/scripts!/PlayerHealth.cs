@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] int health = 100;
     [SerializeField] int hit = 10;
     [SerializeField] Text amountOfHealth;
+    [SerializeField] Text gameOver;
+    public bool alive = true;
     private void Start()
     {
         amountOfHealth.text = health.ToString();
@@ -17,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (health == 0)
         {
-            print("Game Over!");
+            alive = false;
         }
     }
     private void OnTriggerEnter(Collider other)

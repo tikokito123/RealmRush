@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
@@ -19,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
     }
     IEnumerator EnemySpawn()
     {
-        while (true) // forever!
+        while (FindObjectOfType<PlayerHealth>().alive) // forever!
         {
             GetComponent<AudioSource>().PlayOneShot(spawnedEnemies);
             var enemies = Instantiate(enemy, transform.position, Quaternion.identity);
@@ -27,7 +28,7 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(secondsBetweenSpawn);
             numOfEnemies++;
             enemiesText.text = numOfEnemies.ToString();
-
         }
+        SceneManager.LoadScene(2);
     }
 }
