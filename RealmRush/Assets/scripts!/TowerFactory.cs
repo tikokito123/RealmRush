@@ -36,7 +36,6 @@ public class TowerFactory : MonoBehaviour
         var newTower = Instantiate(towerPrefab, baseWaypoint.transform.position, Quaternion.identity);
         newTower.transform.parent = towerParentTransform;
         towers.Enqueue(newTower);
-        print(towers.Count);
         newTower.baseWaypoint = baseWaypoint;
         baseWaypoint.isPlaceable = false;
     }

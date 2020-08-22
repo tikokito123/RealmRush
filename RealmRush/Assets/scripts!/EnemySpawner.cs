@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject enemy;
     [SerializeField] Transform enemyParentTransform;
     [SerializeField] Text enemiesText;
+    [SerializeField] AudioClip spawnedEnemies;
     int numOfEnemies;
     private void Start()
     {
@@ -20,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
     {
         while (true) // forever!
         {
+            GetComponent<AudioSource>().PlayOneShot(spawnedEnemies);
             var enemies = Instantiate(enemy, transform.position, Quaternion.identity);
             enemies.transform.parent = enemyParentTransform;
             yield return new WaitForSeconds(secondsBetweenSpawn);
